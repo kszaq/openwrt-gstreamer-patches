@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-base
-PKG_VERSION:=1.2.2
+PKG_VERSION:=1.2.4
 PKG_RELEASE:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-base-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-base-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-base/
-PKG_MD5SUM:=ed0fd639a10d91870cc1d55727bb4f44
+PKG_MD5SUM:=278e0a1872ecb981e91830b2cb7f3e98
 
 PKG_BUILD_DEPENDS:= gstreamer1 liboil
 PKG_CONFIG_DEPENDS:= \

@@ -10,8 +10,8 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=gst1-libav
 PKG_RELEASE:=1
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-libav
-PKG_VERSION:=1.2.2
-PKG_MD5SUM:=86540dee14d31daf976eb2713f2294f3
+PKG_VERSION:=1.2.4
+PKG_MD5SUM:=6454f9f22b3aa37694781633e0d20a9c
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-libav-$(PKG_VERSION)
 PKG_SOURCE:=gst-libav-$(PKG_VERSION).tar.xz

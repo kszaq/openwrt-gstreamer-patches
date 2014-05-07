@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-bad
-PKG_VERSION:=1.2.2
+PKG_VERSION:=1.2.4
 PKG_RELEASE:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-bad-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-bad-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-bad/
-PKG_MD5SUM:=d519b7e8e570c4a22d6b79f2ab89765c
+PKG_MD5SUM:=16c2050716383926909664aa6c6aca2b
 
 PKG_BUILD_DEPENDS:= gstreamer1 gst1-plugins-base liboil
 
@@ -78,7 +78,7 @@ CONFIGURE_ARGS += \
 	--disable-resindvd \
 	--disable-metadata \
 	--disable-faac \
-	--disable-faad \
+	$(call GST_COND_SELECT,faad) \
 	--disable-fbdev \
 	--disable-flite \
 	--disable-gsm \
@@ -211,6 +211,7 @@ $(eval $(call GstBuildPlugin,dccp,dccp support,,,))
 $(eval $(call GstBuildPlugin,debugutilsbad,debugutils support,,,))
 $(eval $(call GstBuildPlugin,dtmf,dtmf support,rtp,,))
 $(eval $(call GstBuildPlugin,dvdspu,dvdspu support,video,,))
+$(eval $(call GstBuildPlugin,faad,faad support,audio,,+libfaad2))
 $(eval $(call GstBuildPlugin,festival,festival support,audio,,))
 $(eval $(call GstBuildPlugin,freeze,freeze support,,,))
 $(eval $(call GstBuildPlugin,frei0r,frei0r support,controller video,,))

@@ -7,13 +7,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-good
-PKG_VERSION:=1.2.2
+PKG_VERSION:=1.2.4
 PKG_RELEASE:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-good-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-good-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-good/
-PKG_MD5SUM:=f8a9be6c5362d13ee41b600c74e843f4
+PKG_MD5SUM:=8aac024ee0cd98b67a3066ad31d8c677
 
 PKG_BUILD_DEPENDS:= gstreamer1 gst1-plugins-base liboil
 
@@ -158,6 +158,7 @@ $(eval $(call GstBuildPlugin,flac,FLAC codec,audio pbutils tag,,+libflac))
 $(eval $(call GstBuildPlugin,id3demux,ID3v1/v2 demuxer,pbutils tag,,))
 $(eval $(call GstBuildPlugin,icydemux,icy demuxer,audio tag,,))
 $(eval $(call GstBuildPlugin,interleave,audio interleave,audio,,))
+$(eval $(call GstBuildPlugin,isomp4,isomp4 demuxer,audio pbutils riff rtp video,,))
 $(eval $(call GstBuildPlugin,level,audio level,audio,,))
 $(eval $(call GstBuildPlugin,audioparsers,audioparsers,audio tag pbutils,,))
 $(eval $(call GstBuildPlugin,multifile,multiple files access,video,,))
